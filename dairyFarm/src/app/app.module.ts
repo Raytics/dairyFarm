@@ -3,14 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListComponent } from './buffalo/list/list.component';
-import { FormComponent } from './buffalo/form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    FormComponent
+  
   ],
   imports: [
     BrowserModule,

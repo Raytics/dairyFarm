@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>{{ isEditMode ? 'Edit' : 'Add' }} Buffalo</h2>
+
+  <form [formGroup]="buffaloForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" formControlName="name" />
+    </div>
+
+    <div class="form-group">
+      <label>Breed</label>
+      <input type="text" class="form-control"  formControlName="breed"/>
+    </div>
+
+    <div class="form-group">
+      <label>Age (years)</label>
+      <input type="number" class="form-control" formControlName="age"/>
+    </div>
+
+    <div class="form-group">
+      <label>Status</label>
+      <select class="form-control" formControlName="status">
+        <option value="Healthy">Healthy</option>
+        <option value="Sick">Sick</option>
+        <option value="Injured">Injured</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">
+      {{ isEditMode ? 'Update' : 'Add' }} Buffalo
+    </button>
+  </form>
+</div>

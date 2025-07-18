@@ -1,0 +1,68 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  color: #2e7d32;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card.milk { border-left: 6px solid #81c784; }
+.card.buffalo { border-left: 6px solid #66bb6a; }
+.card.feed { border-left: 6px solid #aed581; }
+.card.staff { border-left: 6px solid #9ccc65; }
+
+.chart-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-section h3 {
+  margin-bottom: 15px;
+  color: #2e7d32;
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+.chart-section h3 {
+  color: #4E342E; /* Brownish for feed */
+}

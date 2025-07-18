@@ -1,0 +1,45 @@
+<div class="form-wrapper">
+  <h2 class="form-title">Create Feed Record</h2>
+
+  <form [formGroup]="feedForm">
+    <div class="form-group">
+      <label for="name">Feed Name</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Enter feed name"
+        formControlName="name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="type">Feed Type</label>
+      <input
+        type="text"
+        id="type"
+        placeholder="Enter feed type"
+        formControlName="type"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Quantity (kg)</label>
+      <input
+        type="number"
+        id="quantity"
+        placeholder="Enter quantity"
+        formControlName="quantity"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" id="date" formControlName="date" />
+    </div>
+    <div formGroupName="address">
+      <label for="date">Date</label>
+      <input type="date" id="date" formControlName="line1"/>
+    </div>
+    <button class="submit-btn" (click)="onSubmit()">Submit</button>
+  </form>
+</div>

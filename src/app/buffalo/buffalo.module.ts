@@ -3,15 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { BuffaloRoutingModule } from './buffalo-routing.module';
 import { BuffaloListComponent } from './buffalo-list/buffalo-list.component';
+import { AddBuffaloComponent } from './buffalo-list/add-buffalo/add-buffalo.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    BuffaloListComponent
+    BuffaloListComponent,
+    AddBuffaloComponent
   ],
   imports: [
     CommonModule,
-    BuffaloRoutingModule
+    BuffaloRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class BuffaloModule { }

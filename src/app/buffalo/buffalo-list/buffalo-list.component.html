@@ -1,1 +1,36 @@
-<p>buffalo-list works!</p>
+<div class="buffalo-list-container">
+  <div class="header">
+    <h2 class="title">🐃 Buffalo List</h2>
+    <button class="btn add" routerLink="add-buffalo">➕ Add Buffalo</button>
+  </div>
+
+  <table class="buffalo-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Breed</th>
+        <th>Age</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let buffalo of buffaloList">
+        <td>{{ buffalo.id }}</td>
+        <td>{{ buffalo.name }}</td>
+        <td>{{ buffalo.breed }}</td>
+        <td>{{ buffalo.age }} yrs</td>
+        <td>
+          <span class="status-badge" [ngClass]="dynamicClasses(buffalo.status)">
+            {{ buffalo.status }}
+          </span>
+        </td>
+        <td>
+          <button class="btn edit" (click)="editBuffaloDetails(buffalo)">✏️ Edit</button>
+          <button class="btn delete" (click)="deleteAnimal(buffalo)">🗑️ Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

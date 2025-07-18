@@ -1,0 +1,14 @@
+ .layout-body {
+  display: flex;
+  height: calc(100vh - 60px); /* Viewport minus header height */
+  margin-top: 60px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 220px;
+  background: #f5f5f5;
+  overflow-y: auto; /* ✅ only this will scroll */
+  height: 100%;
+}

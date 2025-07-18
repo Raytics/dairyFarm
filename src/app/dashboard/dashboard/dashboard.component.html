@@ -1,1 +1,44 @@
-<p>dashboard works!</p>
+<div class="dashboard-container">
+  <h2 class="dashboard-title">📊 Dashboard Overview</h2>
+
+  <div class="summary-cards">
+    <div class="card milk">
+      <h3>🥛 Total Milk (Today)</h3>
+      <p>120 Liters</p>
+    </div>
+    <div class="card buffalo">
+      <h3>🐃 Buffalo Count</h3>
+      <p>10</p>
+    </div>
+    <div class="card feed">
+      <h3>🌾 Feed Distributed</h3>
+      <p>65 kg</p>
+    </div>
+    <div class="card staff">
+      <h3>👨‍🌾 Staff</h3>
+      <p>4 Active</p>
+    </div>
+  </div>
+
+  <div class="chart-section">
+    <h3>📈 Milk Production Chart</h3>
+    <div class="chart-container">
+      <canvas baseChart
+        [data]="milkChartData"
+        [options]="milkChartOptions"
+        chartType="line">
+      </canvas>
+    </div>
+  </div>
+  <div class="chart-section">
+  <h3>🌾 Feed Distribution Chart</h3>
+  <div class="chart-container">
+    <canvas baseChart
+      [data]="feedChartData"
+      [options]="feedChartOptions"
+      chartType="bar">
+    </canvas>
+  </div>
+</div>
+
+</div>
